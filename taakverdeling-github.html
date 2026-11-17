@@ -136,22 +136,12 @@ button:disabled{opacity:.5;cursor:default}
 
 <h2>Poll: welke taak neem jij?</h2>
 <div class="card" id="poll">
-<p>Vote in de whatsapp groep Taak A,B,C of D.</p>
-<div id="formbox"></div>
+<p>De stemming doen we in de WhatsApp-groep, in een aparte poll.</p>
+<div class="box"><b>Vraag:</b> Welke taak neem jij voor het afstudeervoorstel?<br>
+<b>Opties:</b><br>Taak A · Probleem en vraagstelling<br>Taak B · Doel, afbakening en methode<br>Taak C · Literatuur en Excel<br>Taak D · Planning, middelen en eindredactie</div>
 </div>
 </main>
 
-<script>
-// PLAK HIER DE LINK VAN JE GOOGLE FORM (de gewone link of de iframe-link, tussen de aanhalingstekens)
-var FORM_URL = "";
-(function(){
- var box=document.getElementById("formbox");
- if(!FORM_URL){box.textContent="Het formulier is nog niet gekoppeld. Zet de Google Form-link bovenin het script bij FORM_URL.";box.className="warn";return;}
- var url=FORM_URL.indexOf("embedded=true")>-1?FORM_URL:FORM_URL+(FORM_URL.indexOf("?")>-1?"&":"?")+"embedded=true";
- var f=document.createElement("iframe");f.src=url;f.title="Poll taakverdeling";f.style.cssText="width:100%;height:560px;border:0;border-radius:10px";f.loading="lazy";
- box.appendChild(f);
- var p=document.createElement("p");var a=document.createElement("a");a.href=FORM_URL;a.target="_blank";a.rel="noopener";a.textContent="Formulier laadt niet? Open het in een nieuw tabblad.";p.appendChild(a);box.appendChild(p);
-})();
-</script>
+
 </body>
 </html>
